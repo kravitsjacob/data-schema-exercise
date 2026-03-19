@@ -1,5 +1,5 @@
 # ============================================================================
-# Data Schema Sheet — Encoord Data Model
+# Data Schema Sheet — SAInt Data Model
 # ============================================================================
 # Please fill out this sheet to describe your data schema / data model.
 # This will be used for cross-project comparison at the G-PST workshop on
@@ -19,7 +19,7 @@
 # 1. Identity
 # ---------------------------------------------------------------------------
 identity:
-  schema_name: Encoord Data Model
+  schema_name: SAInt Data Model
   organization: <e.g., NREL>
   maintainers:
     - name: <Full Name>
