@@ -68,7 +68,7 @@ summary:
     - Thermal Hydraulic
 
   what_does_it_NOT_cover: |
-    Electric Dynamics (phasor/emt)
+    - Electric Dynamics (phasor/emt)
 
   data_captured: |
     - grid topology
@@ -117,29 +117,28 @@ design:
         aggregates afterward without rerunning or resizing output upfront,
         at the cost of a short wait when a derived view is first requested.
 
-  schema_format: |
-    <e.g., Pydantic models, Julia structs, JSON Schema, Protocol Buffers,
-    XML, CIM, custom DSL, other?>
+  schema_format: ~
 
-  implementation_languages:
-    - <e.g., Python>
-    - <e.g., Julia>
+  implementation_languages: ~
 
-  database_storage_backend: <e.g., PostgreSQL, file-based, in-memory only, ~>
+  database_storage_backend: ~
 
   interoperability:
     imports_from:
-      - <e.g., reads OpenDSS files>
-      - <e.g., reads CIM XML>
+      - ASCII templates
+      - dot-raw
+      - cyme
+      - synergi gas
     exports_to:
-      - <e.g., exports to PowerSystems.jl>
-      - <e.g., exports CIM XML>
-
-  data_tool_relation: <Data only | Some tool specific | Tightly coupled>
+      - ASCII templates
+      - dot-raw
+  data_tool_relation: Some tool specific
 
   extensibility: |
-    <How is the schema extended? e.g., plugin system, subclassing,
-    open-ended fields, config-driven, fork-and-modify?>
+    The core schema is extended only by the vendor in product
+    releases (no fork-and-modify). Types use specialization (subclassing)
+    within the shipped software. Users extend behavior through the API and
+    plugins (e.g., GUI visualizations), not by altering the persisted schema.
 
   units_handling: |
     <How are units handled? e.g., implicit SI, explicit per-field,
