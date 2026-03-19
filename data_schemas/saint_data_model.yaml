@@ -43,13 +43,25 @@ identity:
 # ---------------------------------------------------------------------------
 summary:
   description: |
-    <A paragraph describing what this data schema is, what problem it solves,
-    and who the intended users are.>
+    The SAInt data model structures multi-energy infrastructure as networks
+    (directed graphs of elementary and auxiliary objects with geometric,
+    topological, relational, and static properties), scenarios (simulation type,
+    time window, settings, controls, constraints, and profiles), and solutions
+    (variables at each calculated time step; base results in files, derived
+    results on demand). It supports integrated planning and analysis across
+    electricity and gas for generation, transmission, and distribution
+    planners who need one coherent representation instead of siloed sector
+    data. Its users are industry professionals at utilities, in
+    consulting, and at system operators who run simulations and optimizations
+    and exchange network, scenario, and solution artifacts.
 
   modeling_domains_supported: |
-    <What modeling domains does this data schema support? e.g., capacity expansion
-    (zonal), production cost (nodal), bulk power flow, dynamics, distribution,
-    multi-energy/sector coupling, etc.>
+    Capacity Expansion,
+    Production Cost (nodal), Production Cost (zonal),
+    Balanced Three Phase AC Power Flow (steady-state), Balanced Three Phase AC Power Flow (timeseries)
+    Unbalanced Three Phase AC Power Flow (steady-state), Unbalanced Three Phase AC Power Flow (timeseries)
+    Steady-state Gas Hydraulic, Dynamic Gas Hydraulic,
+    Thermal Hydraulic
 
   what_does_it_NOT_cover: |
     <Equally important — what is explicitly out of scope?>
