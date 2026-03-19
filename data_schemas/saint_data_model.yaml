@@ -123,11 +123,7 @@ usage:
       link: https://www.encoord.com/saint
 
   largest_real_world_dataset: |
-    Due to CEII restrictions, we cannot share "real world" datasets, but we
-    have a large synthetic dataset that can be used for testing and
-    demonstration purposes.
-    Integrated Planning (ACPF steady-state + nodal PCM):
-    Texas (Synthetic ERCOT model)
+    Due to CEII restrictions, we cannot share "real world" datasets, but we have a large synthetic dataset that can be used for testing and demonstration purposes. Integrated Planning (ACPF steady-state + nodal PCM):Texas (Synthetic ERCOT model)
 
   who_is_using_it:
     - Grid operators
@@ -149,32 +145,17 @@ challenges:
     - No support for electric dynamics (phasor/emt)
 
   hardest_problems_encountered: |
-    The most difficult problem is bringing together data from different tools
-    into a single coherent dataset. We refer to a single coherent dataset as
-    an "Integrated Planning Model" (IPM). The SAInt data model is designed to
-    support such a dataset, but populating a dataset in practice can be 
-    challenging because of the need to bring together data from different
-    tools. The biggest challeng is often the simple things such as naming
-    conventions and data availability, even when the data is coming from
-    different places within the same organization.
+    The most difficult problem is bringing together data from different tools into a single coherent dataset. We refer to a single coherent dataset as an "Integrated Planning Model" (IPM). The SAInt data model is designed to support such a dataset, but populating a dataset in practice can be challenging because of the need to bring together data from different tools. The biggest challenge is often the simple things such as naming conventions and data availability, even when the data is coming from different places within the same organization.
 
 # ---------------------------------------------------------------------------
 # 6. Interoperability & Convergence
 # ---------------------------------------------------------------------------
 interoperability:
   areas_of_overlap_with_other_schemas: |
-    No overlap with other schemas that we are aware of, but we do our best to
-    support interoperability with other schemas through import/export
-    capabilities.
+    No overlap with other schemas that we are aware of, but we do our best to support interoperability with other schemas through import/export capabilities.
 
   what_would_convergence_require: |
-    The purpose of our software is to provide useful abstractions to help users
-    achieve their goals. Different software naturally have support for
-    different abstractions and this will necessarily be reflected in the 
-    underlying data schemas. Convergence therefore requires support for data
-    translations between different schemas, and this requires clear and
-    reliable "contracts" for what is expected/required in the data schema
-    for different tools.
+    The purpose of our software is to provide useful abstractions to help users achieve their goals. Different software naturally have support for different abstractions and this will necessarily be reflected in the underlying data schemas. Convergence therefore requires support for data translations between different schemas, and this requires clear and reliable "contracts" for what is expected/required in the data schema for different tools.
 
   biggest_thing_others_should_know: |
     All modeling capabilities are supported from the same underlying schema.
