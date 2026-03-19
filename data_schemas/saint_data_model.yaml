@@ -152,9 +152,7 @@ design:
     reference valid nodes). On import, records that fail validation are
     rejected and the issues are logged so users can correct the source data.
 
-  governance: |
-    <Who decides what to include and when to accept changes? e.g., single
-    maintainer, core team with RFC process, community PRs with review?>
+  governance: ~
 
 # ---------------------------------------------------------------------------
 # 4. Real-World Usage
