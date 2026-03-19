@@ -56,18 +56,26 @@ summary:
     and exchange network, scenario, and solution artifacts.
 
   modeling_domains_supported: |
-    Capacity Expansion,
-    Production Cost (nodal), Production Cost (zonal),
-    Balanced Three Phase AC Power Flow (steady-state), Balanced Three Phase AC Power Flow (timeseries)
-    Unbalanced Three Phase AC Power Flow (steady-state), Unbalanced Three Phase AC Power Flow (timeseries)
-    Steady-state Gas Hydraulic, Dynamic Gas Hydraulic,
-    Thermal Hydraulic
+    - Capacity Expansion
+    - Production Cost (nodal)
+    - Production Cost (zonal)
+    - Balanced Three Phase AC Power Flow (steady-state)
+    - Balanced Three Phase AC Power Flow (timeseries)
+    - Unbalanced Three Phase AC Power Flow (steady-state)
+    - Unbalanced Three Phase AC Power Flow (timeseries)
+    - Steady-state Gas Hydraulic
+    - Dynamic Gas Hydraulic
+    - Thermal Hydraulic
 
   what_does_it_NOT_cover: |
     Electric Dynamics (phasor/emt)
 
   data_captured: |
-    grid topology, device parameters, time series, investment costs, operating constraints
+    - grid topology
+    - device parameters
+    - time series
+    - investment costs
+    - operating constraints
 
   conceptual_structure: |
     The network is a directed graph of typed elementary objects (nodes,
