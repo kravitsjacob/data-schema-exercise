@@ -155,10 +155,11 @@ interoperability:
     There is no direct overlap with other schemas that we are aware of, but we do our best to support interoperability with other schemas through import/export capabilities. Conceptually, the SAInt data model is similar to the common-infrastructure data model, but with a focus on multi-energy infrastructure and integrated planning.
 
   what_would_convergence_require: |
-    The purpose of our software is to provide useful abstractions to help users achieve their goals. Different software naturally have support for different abstractions and this will necessarily be reflected in the underlying data schemas. Convergence therefore requires support for data translations between different schemas, and this requires clear and reliable "contracts" for what is expected/required in the data schema for different tools.
+    Meaningful convergence would require a software-agnostic data schema that can represent timeseries scenario analysis in one coherent model across capacity expansion, production-cost modeling, AC power flow, and dynamic domains.
+    Even with such a schema, different tools will still emphasize different abstractions; convergence therefore also depends on explicit translation contracts (semantics, required vs. optional fields, versioning) between a common layer and each tool's native representation.
 
   biggest_thing_others_should_know: |
-    All modeling capabilities are supported from the same underlying schema.
+    The SAInt data model is a production-grade schema that already implements the hard part convergence would need at the data layer: a single network representation with a time-series scenario layer so capacity expansion, production-cost modeling, and AC power flow can share one underlying model.
 
 # ---------------------------------------------------------------------------
 # Metadata
