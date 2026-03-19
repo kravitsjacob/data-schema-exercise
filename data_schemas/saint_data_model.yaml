@@ -24,7 +24,7 @@ identity:
   maintainers:
     - name: Jacob Kravits (on behalf of encoord)
       affiliation: encoord
-      github: @kravitsjacob
+      github: kravitsjacob
       email: jacob@encoord.com
   repository: ~
   documentation: docs.encoord.com
@@ -80,7 +80,7 @@ summary:
   conceptual_structure: |
     The network is a directed graph of typed elementary objects (nodes,
     branches, externals) plus auxiliary objects that subset or relate them,
-    carrying geometric, topological, relational, and static properties. Equipment 
+    carrying geometric, topological, relational, and static properties. Equipment
     types specialize through inheritance (e.g., a fuel generator is
     a generator, which is an external), so shared fields live on general types
     and specifics on subtypes—separate from how objects connect in the graph.
