@@ -152,7 +152,7 @@ challenges:
 # ---------------------------------------------------------------------------
 interoperability:
   areas_of_overlap_with_other_schemas: |
-    No overlap with other schemas that we are aware of, but we do our best to support interoperability with other schemas through import/export capabilities.
+    There is no direct overlap with other schemas that we are aware of, but we do our best to support interoperability with other schemas through import/export capabilities. Conceptually, the SAInt data model is similar to the common-infrastructure data model, but with a focus on multi-energy infrastructure and integrated planning.
 
   what_would_convergence_require: |
     The purpose of our software is to provide useful abstractions to help users achieve their goals. Different software naturally have support for different abstractions and this will necessarily be reflected in the underlying data schemas. Convergence therefore requires support for data translations between different schemas, and this requires clear and reliable "contracts" for what is expected/required in the data schema for different tools.
