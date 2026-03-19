@@ -29,7 +29,7 @@ identity:
   repository: ~
   documentation: docs.encoord.com
   license: commercial
-  version: 3.8
+  version: 3.8 (as of 2026-03-19)
   maturity: Production
 
   # Point us to the code — we'll review the technical details ourselves
@@ -43,7 +43,7 @@ identity:
 # ---------------------------------------------------------------------------
 summary:
   description: |
-    The SAInt data model structures multi-energy infrastructure as networks (directed graphs of elementary and auxiliary objects with geometric, topological, relational, and static properties), scenarios (simulation type, time window, settings, controls, constraints, and profiles), and solutions (variables at each calculated time step; base results in files, derived results on demand). It supports integrated planning and analysis across electricity and gas for generation, transmission, and distribution planners who need one coherent representation instead of siloed sector data. Its users are industry professionals at utilities, research organizations, in consulting, and at system operators who run simulations and optimizations and exchange network, scenario, and solution artifacts.
+    The SAInt data model structures multi-energy infrastructure as networks (directed graphs of elementary and auxiliary objects with geometric, topological, relational, and static properties), scenarios (simulation type, time window, settings, controls, constraints, and profiles), and solutions (variables at each calculated time step; base results in files, derived results on demand). It supports integrated planning and analysis across electricity and gas for generation, transmission, and distribution planners who need one coherent representation instead of siloed sector data. Its intended users are industry professionals at utilities, research organizations, consulting firms, and system operators who run simulations and optimizations and exchange network, scenario, and solution artifacts.
 
   modeling_domains_supported: |
     - Capacity Expansion
@@ -80,8 +80,10 @@ design:
       rationale: |
         Integrated planning workflows need to reuse one network across many studies while swapping or aligning assumptions between domains (e.g., electric vs gas vs thermal scenarios). Keeping the network stable and pushing formulation choices to the scenario layer lets teams move assumptions between scenarios without duplicating or rewriting the underlying asset model.
 
-    - decision: Separate base results from derived results: base results (fundamental outputs from the simulation or optimization) are persisted in the solution file; derived results are computed on demand from those bases (lazy evaluation) and are not pre-written to disk.
-      rationale: Users do not need to declare every quantity they might inspect before the run. They can execute a study, then explore charts, tables, and aggregates afterward without rerunning or resizing output upfront, at the cost of a short wait when a derived view is first requested.
+    - decision: |
+        Separate base results from derived results: base results (fundamental outputs from the simulation or optimization) are persisted in the solution file; derived results are computed on demand from those bases (lazy evaluation) and are not pre-written to disk.
+      rationale: |
+        Users do not need to declare every quantity they might inspect before the run. They can execute a study, then explore charts, tables, and aggregates afterward without rerunning or resizing output upfront, at the cost of a short wait when a derived view is first requested.
 
   schema_format: ~
 
@@ -101,7 +103,7 @@ design:
   data_tool_relation: Some tool specific
 
   extensibility: |
-    The core schema is extended only by the vendor in product releases (no fork-and-modify). Types use specialization (subclassing) within the shipped software. Users extend behavior through the API and plugins (e.g., GUI visualizations), not by altering the persisted schema.
+    The core schema is extended only by the vendor in product releases (no fork-and-modify). Types use specialization (subclassing) within the shipped software. Users extend behavior through the API and plugins (e.g., GUI visualizations), not by altering the persisted data schema.
 
   units_handling: |
     A built-in units library defines supported quantities and conversions. Users choose their preferred units for input and display; the software converts consistently between them so values stay coherent across the model.
@@ -134,12 +136,10 @@ usage:
     - Researchers
 
   data_available:
-    - geographic_area: Texas (Synthetic ERCOT model)
+    - geographic_area: user-customizable
       content: |
-        On our user forum, we have several datasets available for download
-        which help users get started with using and understanding SAInt.
-        Most SAInt users have their own data for their own systems.
-      access: public
+        On our user forum, we have several example datasets available for download (e.g., Texas Synthetic ERCOT model) which help users get started with using and understanding SAInt. For practical applications, most SAInt users have their own data for their own systems.
+      access: user-customizable
 
 # ---------------------------------------------------------------------------
 # 5. Limitations & Challenges
@@ -168,12 +168,12 @@ interoperability:
     capabilities.
 
   what_would_convergence_require: |
-    The purpose of software is to provide useful abstractions to help users
-    achieve their goals. Different software will naturally have support for
+    The purpose of our software is to provide useful abstractions to help users
+    achieve their goals. Different software naturally have support for
     different abstractions and this will necessarily be reflected in the 
     underlying data schemas. Convergence therefore requires support for data
     translations between different schemas, and this requires clear and
-    reliable "constracts" for what is expected/required in the data schema
+    reliable "contracts" for what is expected/required in the data schema
     for different tools.
 
   biggest_thing_others_should_know: |
