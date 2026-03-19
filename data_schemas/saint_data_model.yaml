@@ -64,15 +64,21 @@ summary:
     Thermal Hydraulic
 
   what_does_it_NOT_cover: |
-    <Equally important — what is explicitly out of scope?>
+    Electric Dynamics (phasor/emt)
 
   data_captured: |
-    <What types of information? e.g., grid topology, device parameters,
-    time series, investment costs, operating constraints, etc.>
+    grid topology, device parameters, time series, investment costs, operating constraints
 
   conceptual_structure: |
-    <Is it component-based, bus-based, graph-based, relational,
-    entity-relationship, hierarchical objects, etc.?>
+    The network is a directed graph of typed elementary objects (nodes,
+    branches, externals) plus auxiliary objects that subset or relate them,
+    carrying geometric, topological, relational, and static properties. Equipment 
+    types specialize through inheritance (e.g., a fuel generator is
+    a generator, which is an external), so shared fields live on general types
+    and specifics on subtypes—separate from how objects connect in the graph.
+    Scenarios and time-step solutions layer on that same object graph, so the
+    model is graph-based and object-oriented rather than a flat bus-table or
+    purely relational layout.
 
 # ---------------------------------------------------------------------------
 # 3. Key Design Decisions
