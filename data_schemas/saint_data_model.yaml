@@ -22,7 +22,7 @@ identity:
   schema_name: SAInt Data Model
   organization: encoord
   maintainers:
-    - name: Jacob Kravits
+    - name: Jacob Kravits (on behalf of encoord)
       affiliation: encoord
       github: @kravitsjacob
       email: jacob@encoord.com
@@ -146,8 +146,11 @@ design:
     converts consistently between them so values stay coherent across the model.
 
   validation_approach: |
-    <What does validation cover? e.g., schema structure only, range checks,
-    cross-field validation, physical consistency checks (e.g., convexity)?>
+    Validation runs continuously as users edit: invalid entries are blocked
+    before they are accepted, including cross-field rules (e.g., a maximum
+    cannot be below its minimum) and graph consistency (e.g., a branch must
+    reference valid nodes). On import, records that fail validation are
+    rejected and the issues are logged so users can correct the source data.
 
   governance: |
     <Who decides what to include and when to accept changes? e.g., single
