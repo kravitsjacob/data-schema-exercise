@@ -20,17 +20,17 @@
 # ---------------------------------------------------------------------------
 identity:
   schema_name: SAInt Data Model
-  organization: <e.g., NREL>
+  organization: encoord
   maintainers:
-    - name: <Full Name>
-      affiliation: <Org Name>
-      github: <@handle>
-      email: <email>
-  repository: <https://github.com/...>
-  documentation: <https://...>
-  license: <e.g., BSD-3-Clause>
-  version: <e.g., v2.1.0 or "pre-release">
-  maturity: <Prototype | Active Development | Stable | Production>
+    - name: Jacob Kravits
+      affiliation: encoord
+      github: @kravitsjacob
+      email: jacob@encoord.com
+  repository: null
+  documentation: docs.encoord.com
+  license: commercial
+  version: 3.8
+  maturity: Production
 
   # Point us to the code — we'll review the technical details ourselves
   link_to_schema_definition: <https://github.com/.../src/models/>
