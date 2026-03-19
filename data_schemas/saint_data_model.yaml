@@ -26,17 +26,17 @@ identity:
       affiliation: encoord
       github: @kravitsjacob
       email: jacob@encoord.com
-  repository: null
+  repository: ~
   documentation: docs.encoord.com
   license: commercial
   version: 3.8
   maturity: Production
 
   # Point us to the code — we'll review the technical details ourselves
-  link_to_schema_definition: <https://github.com/.../src/models/>
-  link_to_validation_logic: <https://github.com/.../src/validators/>
-  link_to_timeseries_management: <https://github.com/.../src/timeseries/>
-  link_to_entity_relation_diagram: <https://... or ~ if not published>
+  link_to_schema_definition: https://docs.encoord.com/reference/latest/layers/index.html
+  link_to_validation_logic: ~
+  link_to_timeseries_management: https://docs.encoord.com/reference/latest/layers/scenario.html#reference-layers-scenario-scenario-profile
+  link_to_entity_relation_diagram: https://docs.encoord.com/reference/latest/objects/electric.html
 
 # ---------------------------------------------------------------------------
 # 2. What It Is & What It Covers
