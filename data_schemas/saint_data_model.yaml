@@ -183,6 +183,6 @@ interoperability:
 # Metadata
 # ---------------------------------------------------------------------------
 card_metadata:
-  prepared_by: <Name>
-  date: <YYYY-MM-DD>
+  prepared_by: Jacob Kravits
+  date: 2026-03-19
   info_sheet_version: "1.0"
