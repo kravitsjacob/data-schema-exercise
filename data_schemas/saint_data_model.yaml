@@ -141,8 +141,9 @@ design:
     plugins (e.g., GUI visualizations), not by altering the persisted schema.
 
   units_handling: |
-    <How are units handled? e.g., implicit SI, explicit per-field,
-    unit conversion library, embedded in field names?>
+    A built-in units library defines supported quantities and conversions.
+    Users choose their preferred units for input and display; the software
+    converts consistently between them so values stay coherent across the model.
 
   validation_approach: |
     <What does validation cover? e.g., schema structure only, range checks,
